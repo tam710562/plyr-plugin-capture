@@ -3,9 +3,7 @@
     const saveLink = document.createElement('a');
     saveLink.href = data;
     saveLink.download = filename;
-    const event = document.createEvent('MouseEvents');
-    event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-    saveLink.dispatchEvent(event);
+    saveLink.click();
   }
   function capture(player, label) {
     const width = player.media.videoWidth;
